@@ -5,20 +5,20 @@ const GalleryPage: React.FC = () => {
   // LISTA DE FOTOS: Troque os links abaixo pelos links das suas fotos reais
   const photos = [
     {
-      url: 'https://picsum.photos/seed/love1/800/1200',
-      caption: 'Onde tudo começou... ✨'
-    },
-    {
-      url: 'https://picsum.photos/seed/love2/800/1200',
+      url: '/fotos/foto1.jpg',
       caption: 'Cada momento com você é um presente.'
     },
     {
-      url: 'https://picsum.photos/seed/love3/800/1200',
-      caption: 'Seu sorriso é minha parte favorita do dia.'
+      url: '/fotos/foto2.jpg',
+      caption: 'Seu sorriso é minha parte favorita do dia'
     },
     {
-      url: 'https://picsum.photos/seed/love4/800/1200',
-      caption: 'Para sempre nós dois. ❤️'
+      url: '/fotos/foto3.jpg',
+      caption: 'Para sempre nós dois.'
+    },
+    {
+      url: '/fotos/foto4.jpg',
+      caption: 'Te amo Maisa. ❤️'
     }
   ];
 
@@ -79,7 +79,7 @@ const GalleryPage: React.FC = () => {
 
       {/* Rodapé Decorativo */}
       <footer className="mt-20 text-center opacity-40 text-sm tracking-widest uppercase">
-        <p>Feito com amor • 2024</p>
+        <p>Feito pelo seu Dev Jr Renan :) • Te amo</p>
       </footer>
     </div>
   );
