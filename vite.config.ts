@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
-    base: '/forMyLove/', // 👈 NOME DO REPOSITÓRIO
+    base: '/ForMyLove/', // 👈 NOME DO REPOSITÓRIO
 
     server: {
       port: 3000,
