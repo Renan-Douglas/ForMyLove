@@ -9,22 +9,25 @@ const App: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleOpenSurprise = () => {
-    setTransitioning(true);
+  setTransitioning(true);
 
-    // ▶️ iOS só permite áudio após interação do usuário
-    if (audioRef.current) {
-      audioRef.current.volume = 0.5;
-      audioRef.current.play().catch(() => {
-        // evita erro silencioso no Safari
-      });
-    }
+  // ▶️ iOS só permite áudio após interação do usuário
+  if (audioRef.current) {
+    audioRef.current.volume = 0.5;
 
-    setTimeout(() => {
-      setShowGallery(true);
-      setTransitioning(false);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 800);
-  };
+    // ⏱️ começa no segundo 36
+    audioRef.current.currentTime = 60;
+
+    audioRef.current.play().catch(() => {});
+  }
+
+  setTimeout(() => {
+    setShowGallery(true);
+    setTransitioning(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 800);
+};
+
 
   return (
     <div
@@ -41,9 +44,12 @@ const App: React.FC = () => {
       )}
 
       {/* Background Music */}
-      <audio ref={audioRef} loop id="bg-music">
-        <source src="/dados/musica2.mp3" type="audio/mpeg" />
-      </audio>
+      <audio ref={audioRef} loop preload="auto" id="bg-music">
+  <source
+    src={`${import.meta.env.BASE_URL}dados/musica2.mp3`}
+    type="audio/mpeg"
+  />
+</audio>
     </div>
   );
 };
