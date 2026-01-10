@@ -12,10 +12,22 @@ const GalleryPage: React.FC = () => {
     },
     {
       url: `${import.meta.env.BASE_URL}dados/foto3.jpeg`,
-      caption: 'Para sempre nós dois.'
+      caption: 'Viver ao lado me faz bem'
     },
     {
       url: `${import.meta.env.BASE_URL}dados/foto4.jpeg`,
+      caption: 'Melhor parte do dia e acordar com você'
+    }
+    {
+      url: `${import.meta.env.BASE_URL}dados/foto5.jpeg`,
+      caption: 'Não me imagino mais sem você'
+    }
+    {
+      url: `${import.meta.env.BASE_URL}dados/foto6.jpeg`,
+      caption: 'Para sempre nós dois.'
+    }
+    {
+      url: `${import.meta.env.BASE_URL}dados/foto7.jpeg`,
       caption: 'Te amo Maisa. ❤️'
     }
   ];
